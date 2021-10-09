@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Canvas.cpp">
+    <ClCompile Include="Festival.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Participant.cpp">
@@ -29,7 +29,7 @@
     <ClInclude Include="Participant.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Canvas.h">
+    <ClInclude Include="Festival.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,17 +1,22 @@
 #include <iostream>
 #include "Participant.h"
-#include "Canvas.h"
+#include "Festival.h"
 
 int main()
 {
     setlocale(LC_ALL, "rus");
-    int choice = 1;
-    Canvas fest;
+    int choice = 1, k = 0;
+    Festival fest;
     while (choice == 1) {
         cout << "Фестиваль открыт!\n";
         fest.festival_open();
-        while (true && choice != 4) {
-            cout << "Выберите текущее действие\n1 - Регистрация участника\n2 - Окончание регистрации\n3 - Проведение конкурса (добавление баллов к участнику)\n4 - Подвести итоги" << endl;
+        while (choice != 4) {
+            if (k != 2) {
+                cout << "Выберите текущее действие\n1 - Регистрация участника\n2 - Окончание регистрации\n3 - Проведение конкурса (добавление баллов к участнику)\n4 - Подвести итоги" << endl;
+            }
+            if (k == 2) {
+                cout << "Выберите текущее действие\n3 - Проведение конкурса (добавление баллов к участнику)\n4 - Подвести итоги" << endl;
+            }
             cin >> choice;
             switch (choice)
             {
@@ -19,7 +24,10 @@ int main()
                 fest.add_participant(); break;
             }
             case 2: {
-                fest.close_registration(); break;
+                fest.close_registration(); 
+                k = 2;
+                break;
+                
             }
             case 3: {
                 fest.add_points_to_participant(); break;

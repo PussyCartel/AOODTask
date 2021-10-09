@@ -8,7 +8,7 @@
 using namespace std;
 
 // Данный класс реализует логику конкурса
-class Canvas {
+class Festival {
 
 private:
     bool festival_status = false;

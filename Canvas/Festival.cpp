@@ -1,7 +1,7 @@
-﻿#include "Canvas.h"
+﻿#include "Festival.h"
 
-// Метод задает параметры кункурса и меняет его статус на
-void Canvas::festival_open() {
+// Метод задает параметры конкурса и меняет его статус на
+void Festival::festival_open() {
     this->festival_status = true;
     cout << "Введите количество участников и количество призовых мест" << endl;
     cin >> this->participant_number >> this->prize_number;
@@ -12,7 +12,7 @@ void Canvas::festival_open() {
 }
 
 // На основе введённых данных добавляет экземпляр Participant в вектор partacipants класса Concurs
-void Canvas::add_participant() {
+void Festival::add_participant() {
     string name;
     int id;
     double points;
@@ -26,12 +26,12 @@ void Canvas::add_participant() {
 }
 
 // Метод для блокировки метода add_participant
-void Canvas::close_registration() {
+void Festival::close_registration() {
     this->registration_status = false;
 }
 
 // Метод итеррируется по вектору участников и добавляет очки нужному кандидату
-void Canvas::add_points_to_participant() {
+void Festival::add_points_to_participant() {
     int id;
     double points;
     cout << "Введите ID участника" << endl;
@@ -47,7 +47,7 @@ void Canvas::add_points_to_participant() {
 }
 
 // вспомогительный метод для дебага, который выводит вектор участников
-void Canvas::show_participants() {
+void Festival::show_participants() {
     for (auto it = participants.begin(); it != participants.end(); ++it) {
         cout << it->get_name() << endl;
         cout << it->get_points() << endl;
@@ -55,7 +55,7 @@ void Canvas::show_participants() {
 }
 
 // Закрытие фестиваля
-void Canvas::festival_close() {
+void Festival::festival_close() {
     this->festival_status = false;
     cout << "Объявляется закрытие конкурса" << endl;
     sort(participants.begin(), participants.end(), [](Participant a, Participant b) -> bool {

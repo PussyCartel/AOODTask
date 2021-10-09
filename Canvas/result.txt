@@ -1,1 +1,2 @@
-f - 3
+Vasiliy - 100
+Pasha - 5
