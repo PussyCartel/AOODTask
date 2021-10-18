@@ -1,2 +1,2 @@
-Vasiliy - 100
-Pasha - 5
+vitia;1;12
+pasha;2;12

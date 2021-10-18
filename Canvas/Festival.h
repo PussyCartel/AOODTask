@@ -18,9 +18,12 @@ private:
     vector <Participant> participants;
 
 public:
+    Festival();
     void festival_open();
-    void add_participant();
+    bool add_participant();
     void close_registration();
+    bool get_status();
+    bool get_number_of_participants();
     void add_points_to_participant();
     void show_participants();
     void festival_close();
