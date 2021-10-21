@@ -17,6 +17,5 @@ public:
     int get_id();
     double get_points();
     void add_points(double add);
-
 };
 

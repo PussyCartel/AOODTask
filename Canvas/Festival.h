@@ -22,11 +22,11 @@ public:
     void festival_open();
     bool add_participant();
     void close_registration();
+    bool get_registration_status();
     bool get_status();
+    void update_stats();
     bool get_number_of_participants();
     void add_points_to_participant();
     void show_participants();
     void festival_close();
 };
-
-
