@@ -95,6 +95,7 @@ bool Festival::add_participant() {
 void Festival::close_registration() {
     this->registration_status = false;
     this->update_stats();
+
 }
 
 bool Festival::get_registration_status() {

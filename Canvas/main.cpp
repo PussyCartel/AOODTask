@@ -10,7 +10,7 @@ int main()
     Festival fest;
     fstream file("result.txt", ios::app);
     while (choice != 4) {
-        if (fest.get_status() && fest.get_number_of_participants()) {
+        if (fest.get_registration_status() && fest.get_number_of_participants()) {
             cout << "Выберите текущее действие\n1 - Регистрация участника\n2 - Окончание регистрации\n3 - Проведение конкурса (добавление баллов к участнику)\n4 - Подвести итоги" << endl;
         }
         else {
@@ -32,7 +32,13 @@ int main()
             fest.add_points_to_participant(); break;
         }
         case 4: {
-            fest.festival_close(); break;
+            fest.festival_close(); 
+            ofstream ofs;
+            ofs.open("info.txt", std::ios::out | std::ios::trunc);
+            ofs.close();
+            ofs.open("result.txt", std::ios::out | std::ios::trunc);
+            ofs.close();
+            break;   
         }
         default:
             break;
